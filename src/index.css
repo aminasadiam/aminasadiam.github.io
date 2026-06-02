@@ -1,1 +1,38 @@
 @import 'tailwindcss';
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Minimal Styles */
+.card {
+  @apply border border-black p-8 hover:bg-black hover:text-white transition-colors;
+}
+
+.card-simple {
+  @apply border-b border-black pb-8 mb-8;
+}
+
+.link-minimal {
+  @apply relative inline-block after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-black hover:after:w-full after:transition-all;
+}
+
+.text-accent {
+  @apply font-bold;
+}
+
+.divider {
+  @apply border-t border-black my-12;
+}
+
